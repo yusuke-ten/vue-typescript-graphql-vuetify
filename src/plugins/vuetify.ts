@@ -1,5 +1,8 @@
 import Vue from 'vue'
-import Vuetify from 'vuetify/lib'
+// tree shaking ビルドサイズを小さくしてくれる
+// import Vuetify from 'vuetify/lib'
+// 全部インポートビルドは早い
+import Vuetify from 'vuetify'
 
 Vue.use(Vuetify)
 
