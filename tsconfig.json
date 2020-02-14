@@ -17,7 +17,7 @@
       "@/*": ["src/*"]
     },
     "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
-    "typeRoots": ["src/@types", "node_modules/@types"]
+    "typeRoots": ["src/@types", "node_modules/@types", "./node_modules/vuetify/types"]
   },
   "include": [
     "src/**/*.ts",
