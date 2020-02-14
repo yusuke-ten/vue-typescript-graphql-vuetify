@@ -11,26 +11,13 @@
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "baseUrl": ".",
-    "types": [
-      "webpack-env",
-      "jest",
-      "vuetify"
-    ],
+    "types": ["webpack-env", "jest", "vuetify"],
     "paths": {
-      "~/*": [
-        "./*"
-      ],
-      "@/*": [
-        "src/*"
-      ]
+      "~/*": ["./*"],
+      "@/*": ["src/*"]
     },
-    "lib": [
-      "esnext",
-      "dom",
-      "dom.iterable",
-      "scripthost"
-    ],
-    "typeRoots": ["src/@types", "node_modules/@types"],
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
+    "typeRoots": ["src/@types", "node_modules/@types"]
   },
   "include": [
     "src/**/*.ts",
@@ -40,7 +27,5 @@
     "tests/**/*.tsx",
     "tests/unit/setup.js"
   ],
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }
