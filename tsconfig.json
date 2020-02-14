@@ -17,6 +17,9 @@
       "vuetify"
     ],
     "paths": {
+      "~/*": [
+        "./*"
+      ],
       "@/*": [
         "src/*"
       ]
@@ -26,7 +29,8 @@
       "dom",
       "dom.iterable",
       "scripthost"
-    ]
+    ],
+    "typeRoots": ["src/@types", "node_modules/@types"],
   },
   "include": [
     "src/**/*.ts",
