@@ -1,24 +1,10 @@
 module.exports = {
-  moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/src/$1',
-    '^~/(.*)$': '<rootDir>/src/$1',
-    '^vue$': 'vue/dist/vue.common.js',
-    '.+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$':
-      'identity-obj-proxy'
-  },
-  moduleFileExtensions: ['ts', 'js', 'vue', 'json'],
-  transform: {
-    '^.+\\.js$': 'babel-jest',
-    '.*\\.(vue)$': 'vue-jest',
-    '^.+\\.ts?$': 'ts-jest'
-  },
+  preset: '@vue/cli-plugin-unit-jest/presets/typescript-and-babel',
+  setupFilesAfterEnv: ['<rootDir>/tests/unit/setup.js'],
   collectCoverage: true,
   collectCoverageFrom: [
     '<rootDir>/src/components/**/*.vue',
-    '<rootDir>/src/view/**/*.vue'
+    '<rootDir>/src/views/**/*.vue'
   ],
-  coverageReporters: ['json-summary', 'text', 'lcov'],
-  preset: 'ts-jest',
-  setupFilesAfterEnv: ['<rootDir>/tests/unit/setup.js'],
-  transformIgnorePatterns: ['/node_modules/(?!vuetify).+\\.js$']
+  coverageReporters: ['json-summary', 'text', 'lcov']
 }
