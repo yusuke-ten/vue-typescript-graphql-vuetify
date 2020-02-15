@@ -7,17 +7,11 @@
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator'
-import gql from 'graphql-tag'
+import fetchPersonQuery from '../graphql/querys/person.graphql'
 
 @Component({
   apollo: {
-    person: gql`
-      query {
-        person(personID: 4) {
-          name
-        }
-      }
-    `
+    person: fetchPersonQuery
   }
 })
 export default class Persons extends Vue {}

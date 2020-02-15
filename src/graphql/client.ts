@@ -2,7 +2,7 @@ import { ApolloClient } from 'apollo-client'
 import { createHttpLink } from 'apollo-link-http'
 import { InMemoryCache } from 'apollo-cache-inmemory'
 const httpLink = createHttpLink({
-  uri: 'http://graphql.org/swapi-graphql'
+  uri: 'http://localhost:8888'
 })
 
 export default new ApolloClient({
