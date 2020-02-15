@@ -29,7 +29,7 @@
     >
       <v-list dense>
         <template v-for="item in items">
-          <v-list-item :key="item.text" link>
+          <v-list-item :key="item.text" link :to="item.to">
             <v-list-item-action>
               <v-icon>{{ item.icon }}</v-icon>
             </v-list-item-action>
@@ -52,14 +52,14 @@ import { Vue, Component } from 'vue-property-decorator'
 export default class HelloVue extends Vue {
   drawer = true
   items = [
-    { icon: 'mdi-contacts', text: 'Contacts' },
-    { icon: 'mdi-history', text: 'Frequently contacted' },
-    { icon: 'mdi-content-copy', text: 'Duplicates' },
-    { icon: 'mdi-settings', text: 'Settings' },
-    { icon: 'mdi-message', text: 'Send feedback' },
-    { icon: 'mdi-help-circle', text: 'Help' },
-    { icon: 'mdi-cellphone-link', text: 'App downloads' },
-    { icon: 'mdi-keyboard', text: 'Go to the old version' }
+    { icon: 'mdi-contacts', text: 'Contacts', to: { path: '/persons' } },
+    { icon: 'mdi-history', text: 'Frequently contacted', to: { path: '/' } },
+    { icon: 'mdi-content-copy', text: 'Duplicates', to: { path: '/' } },
+    { icon: 'mdi-settings', text: 'Settings', to: { path: '/' } },
+    { icon: 'mdi-message', text: 'Send feedback', to: { path: '/' } },
+    { icon: 'mdi-help-circle', text: 'Help', to: { path: '/' } },
+    { icon: 'mdi-cellphone-link', text: 'App downloads', to: { path: '/' } },
+    { icon: 'mdi-keyboard', text: 'Go to the old version', to: { path: '/' } }
   ]
 }
 </script>
