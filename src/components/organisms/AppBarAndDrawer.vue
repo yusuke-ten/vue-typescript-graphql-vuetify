@@ -52,7 +52,7 @@ import { Vue, Component } from 'vue-property-decorator'
 export default class HelloVue extends Vue {
   drawer = true
   items = [
-    { icon: 'mdi-contacts', text: 'Contacts', to: { path: '/persons' } },
+    { icon: 'mdi-contacts', text: 'Contacts', to: { path: '/all-people' } },
     { icon: 'mdi-history', text: 'Frequently contacted', to: { path: '/' } },
     { icon: 'mdi-content-copy', text: 'Duplicates', to: { path: '/' } },
     { icon: 'mdi-settings', text: 'Settings', to: { path: '/' } },
