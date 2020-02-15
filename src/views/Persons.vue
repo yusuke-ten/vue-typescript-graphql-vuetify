@@ -1,63 +1,24 @@
 <template>
   <v-container>
     <h1>This is an about page</h1>
+    {{ person }}
   </v-container>
 </template>
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator'
+import gql from 'graphql-tag'
 
-@Component({})
-export default class Persons extends Vue {
-  ecosystem = [
-    {
-      text: 'vuetify-loader',
-      href: 'https://github.com/vuetifyjs/vuetify-loader'
-    },
-    {
-      text: 'github',
-      href: 'https://github.com/vuetifyjs/vuetify'
-    },
-    {
-      text: 'awesome-vuetify',
-      href: 'https://github.com/vuetifyjs/awesome-vuetify'
-    }
-  ]
-  importantLinks = [
-    {
-      text: 'Documentation',
-      href: 'https://vuetifyjs.com'
-    },
-    {
-      text: 'Chat',
-      href: 'https://community.vuetifyjs.com'
-    },
-    {
-      text: 'Made with Vuetify',
-      href: 'https://madewithvuejs.com/vuetify'
-    },
-    {
-      text: 'Twitter',
-      href: 'https://twitter.com/vuetifyjs'
-    },
-    {
-      text: 'Articles',
-      href: 'https://medium.com/vuetify'
-    }
-  ]
-  whatsNext = [
-    {
-      text: 'Explore components',
-      href: 'https://vuetifyjs.com/components/api-explorer'
-    },
-    {
-      text: 'Select a layout',
-      href: 'https://vuetifyjs.com/layout/pre-defined'
-    },
-    {
-      text: 'Frequently Asked Questions',
-      href: 'https://vuetifyjs.com/getting-started/frequently-asked-questions'
-    }
-  ]
-}
+@Component({
+  apollo: {
+    person: gql`
+      query {
+        person(personID: 4) {
+          name
+        }
+      }
+    `
+  }
+})
+export default class Persons extends Vue {}
 </script>
