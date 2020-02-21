@@ -1,4 +1,6 @@
-# vue-practice
+# vue-typescript-graphql-vuetify
+
+はじめに[Star wars graphql](https://github.com/graphql/swapi-graphql)をloclahost:8000で起動する必要があります。
 
 ## Project setup
 ```

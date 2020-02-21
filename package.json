@@ -1,7 +1,8 @@
 {
-  "name": "vue-practice",
+  "name": "vue-typescript-graphql-vuetify",
   "version": "0.1.0",
   "private": true,
+  "description": "Graphqlの練習用",
   "scripts": {
     "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
